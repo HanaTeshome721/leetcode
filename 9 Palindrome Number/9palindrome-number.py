@@ -1,0 +1,13 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+       if x<0:
+        return False
+       elif x!=0 and x%10==0:
+        return False
+       else:
+        r=0
+        while x>r:
+            r= r*10 + x%10
+            x//=10
+        return r==x or r//10==x      
+       
