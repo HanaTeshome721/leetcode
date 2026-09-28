@@ -1,5 +1,5 @@
 class Solution:
-    def reverseString(self, s: List[str]) -> None:
+    def reverseString(self, s: list[str]) -> None:
         """
         Do not return anything, modify s in-place instead.
         """
@@ -7,5 +7,5 @@ class Solution:
         r=len(s)-1
         while l<r:
             s[l],s[r]=s[r],s[l]
-            l+=1
             r-=1
+            l+=1
