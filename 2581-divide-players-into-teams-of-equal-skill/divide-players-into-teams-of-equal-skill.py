@@ -11,7 +11,7 @@ class Solution:
         l=0
         r=lg-1
         t=sm//(lg//2)
-        while l<r:
+        while l<=r:
             if skill[l]+skill[r]==t:
                 res+=skill[l]*skill[r]
             else:
