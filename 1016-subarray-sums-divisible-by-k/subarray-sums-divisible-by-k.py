@@ -11,18 +11,17 @@ class Solution:
         #         cn+=1
         # return cn 
 
-    #   d=defaultdict(int)
-    #   d[0]=1
-    #   c=0
-    #   ans=0
-    #   for n in nums:
-    #     c+=n
-    #     if c%k==0: 
-    #       ans+=1
-    #     if c//k in d:
-    #         ans+=d[c//k]  
-    #     d[c]+=1    
-    #   return ans      
+      d=defaultdict(int)
+      d[0]=1
+      c=0
+      ans=0
+      for n in nums:
+        c+=n
+
+        if c%k in d:
+            ans+=d[c%k]  
+        d[c%k]+=1    
+      return ans      
         # ans=0
         # for i in range(len(nums)):
         #   sb=nums[i]    
@@ -51,12 +50,12 @@ class Solution:
         # return res  
 
 
-        cursum=0
-        pref={0:1}
-        res=0
-        for n in nums:
-            cursum+=n
-            diff=cursum%k
-            res+=pref.get(diff,0)
-            pref[diff]=1+pref.get(diff,0)
-        return res  
+        # cursum=0
+        # pref={0:1}
+        # res=0
+        # for n in nums:
+        #     cursum+=n
+        #     diff=cursum%k
+        #     res+=pref.get(diff,0)
+        #     pref[diff]=1+pref.get(diff,0)
+        # return res  
